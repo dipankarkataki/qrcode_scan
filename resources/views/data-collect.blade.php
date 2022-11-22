@@ -27,15 +27,14 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            width:50%;
         }
         .user-data-form{
-            border: 1px solid #edebeb;
-            box-shadow: 0px 0px 10px #f0ebeb;
-            border-radius: 10px;
-            padding-left: 60px;
-            padding-right: 60px;
-            padding-bottom: 60px;
-            padding-top: 30px;
+            border: 1px solid #efecec;
+            box-shadow: 0px 4px 10px #e8e4e4;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
         }
         .logo{
             display: flex;
