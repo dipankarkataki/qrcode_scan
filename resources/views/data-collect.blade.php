@@ -16,7 +16,12 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
-       
+       body{
+            background-image: url('back2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height:100vh;
+        }
         .container{
             position: absolute;
             top: 50%;
