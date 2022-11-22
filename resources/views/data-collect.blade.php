@@ -71,8 +71,8 @@
     <div class="container">
         <div class="user-data-form">
             <div class="logo">
-                {{-- <img src="/logo/stayfit-logo.png" alt="logo"> --}}
-                <h3>Brand Logo</h3>
+                <img src="/logo/stayfit-logo.png" alt="logo">
+                {{-- <h3>Brand Logo</h3> --}}
             </div>
             <form id="dataCollectForm" class="form-horizontal">
                 @csrf

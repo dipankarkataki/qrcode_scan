@@ -14,7 +14,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
+
     <style>
         body{
             background-image: url('back2.jpg');
@@ -96,8 +96,8 @@
     <div class="container">
         <div class="user-data-form">
             <div class="logo">
-                {{-- <img src="/logo/stayfit-logo.png" alt="logo"> --}}
-                <h3>Brand Logo</h3>
+                <img src="/logo/stayfit-logo.png" alt="logo">
+                {{-- <h3>Brand Logo</h3> --}}
             </div>
             <hr>
             <div class="user-content mb-3">
