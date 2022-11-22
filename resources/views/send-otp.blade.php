@@ -89,6 +89,17 @@
             justify-content: space-between;
             align-items: center;
         }
+
+        @media only screen and (max-width: 600px) {
+            .container{
+                width:80%;
+            }
+
+            label{
+                font-size:12px;
+                font-weight:500;
+            }
+        }
         
     </style>
 </head>
