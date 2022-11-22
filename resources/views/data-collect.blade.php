@@ -97,7 +97,7 @@
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="phone" class="form-label">Enter Mobile Number ( Please Provide WhatsApp Only ):</label>
-                    <input type="text" class="form-control" id="phone" placeholder="e.g 7896541230" name="phone" required>
+                    <input type="text" class="form-control" id="phone" placeholder="e.g 7896541230" name="phone" pattern="^[6789]\d{9}$" title="Phone Number Must Start With The Digit 6,7,8,9" required>
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="email" class="form-label">Enter Email:</label>
