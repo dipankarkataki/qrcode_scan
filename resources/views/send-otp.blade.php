@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Practice</title>
+    <title>QR Registration - The Stayfit Kitchen </title>
     <link rel="icon" type="image/x-icon" href="/logo/stayfit-logo.png">
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -89,6 +89,61 @@
             justify-content: space-between;
             align-items: center;
         }
+        .coupon-div{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin-right: 50px;
+                width: 100%;
+                height: 300px;
+                background-image: linear-gradient(to right top, #0e254e, #31426a, #516188, #7282a6, #95a4c5, #95a4c4, #94a3c2, #94a3c1, #71809f, #4f5e7e, #2f3e5f, #0d2141);
+                border-radius: 5px;
+                display: none;
+        }
+        .coupon-div img{
+            width:500px;
+            border-radius:10px;
+        }
+
+        .coupon-div #voucherId{
+            position: absolute;
+            top: 50px;
+            font-size: 10px;
+            color: #c4c1c1;
+            font-weight: 800;
+            left: 20px;
+        }
+
+        .coupon-div #offPercent{
+            position: absolute;
+            top: 12%;
+            font-size: 38px;
+            color: white;
+            font-weight: 800;
+            left: 23%;
+        }
+
+        .coupon-div #couponCode{
+            position: absolute;
+            top: 20%;
+            font-size: 24px;
+            color: white;
+            font-weight: 800;
+            left: 10%;
+        }
+        .coupon-div h5{
+                text-align: center;
+                margin-top: 9px;
+                margin-bottom: 0px;
+                color: white;
+            }
+        .coupon-div h6{
+            margin-top: 12px;
+            text-align: center;
+            color: white;
+
+        }
 
         @media only screen and (max-width: 600px) {
             .container{
@@ -99,12 +154,74 @@
                 font-size:12px;
                 font-weight:500;
             }
+
+            .coupon-div{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin-right: 50px;
+                width: 100%;
+                height: 300px;
+                background-image: linear-gradient(to right top, #0e254e, #31426a, #516188, #7282a6, #95a4c5, #95a4c4, #94a3c2, #94a3c1, #71809f, #4f5e7e, #2f3e5f, #0d2141);
+                border-radius: 5px;
+                display: none;
+            }
+           
+            .coupon-div img{
+                width: 350px;
+                border-radius: 10px;
+                margin-top: 50px;
+            }
+
+            .coupon-div #voucherId{
+               
+                position: fixed;
+                top: 39.5%;
+                font-size: 6px;
+                color: #c4c1c1;
+                font-weight: 800;
+                left: 18px;
+
+            }
+
+            .coupon-div #offPercent{
+                position: fixed;
+                top: 50%;
+                font-size: 25px;
+                color: white;
+                font-weight: 800;
+                left: 60%;
+            }
+
+            .coupon-div #couponCode{
+               
+                position: fixed;
+                top: 62%;
+                font-size: 23px;
+                color: #eeeeee;
+                font-weight: 800;
+                left: 26%;
+
+            }
         }
+
+        
         
     </style>
 </head>
 <body>
     <div class="container">
+
+        <div class="coupon-div">
+            <h5>Hey! You Have Won A COUPON</h5>
+            <img src="/CouponCode.png" alt="coupon">
+            <p id="voucherId">#12345</p>
+            <p id="offPercent">25%</p>
+            <p id="couponCode">FIT360</p>
+
+            <h6 id="goBack">GO BACK</h6>
+        </div>
         <div class="user-data-form">
             <div class="logo">
                 <img src="/logo/stayfit-logo.png" alt="logo">
@@ -220,7 +337,8 @@
                             text: data.message,
                             icon: 'success',
                         }).then((result) => {
-                            window.location.replace('/');
+                            $('.coupon-div').css("display", "block");
+                            // window.location.replace('/');
                         })
                     }else{
                         Swal.fire({
@@ -237,6 +355,10 @@
                     console.log(error);
                 }
             });
+        });
+
+        $('#goBack').on('click', function(){
+            window.location.replace('/');
         });
     </script>
 </html>
